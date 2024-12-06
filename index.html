@@ -81,31 +81,31 @@
     <div class="website">
       <h3>Screener.in</h3>
       <p>Stock screening, financial statements, and custom reports for Indian investors.</p>
-      <button onclick="openLink('https://www.screener.in')">Visit Screener.in</button>
+      <button class="screener-in">Visit Screener.in</button>
     </div>
 
     <div class="website">
       <h3>Tickertape</h3>
       <p>Stock comparison, fundamental analysis, and filters for picking top stocks in India.</p>
-      <button onclick="openLink('https://www.tickertape.in')">Visit Tickertape</button>
+      <button class="tickertape">Visit Tickertape</button>
     </div>
 
     <div class="website">
       <h3>ET Markets</h3>
       <p>Stay updated with market news, stock screening, and sector analysis in Indian markets.</p>
-      <button onclick="openLink('https://economictimes.indiatimes.com/markets/stocks')">Visit ET Markets</button>
+      <button class="et-markets">Visit ET Markets</button>
     </div>
 
     <div class="website">
       <h3>MarketSmith India</h3>
       <p>Advanced stock analysis using the CANSLIM methodology for Indian markets.</p>
-      <button onclick="openLink('https://marketsmith.in')">Visit MarketSmith India</button>
+      <button class="marketsmith">Visit MarketSmith India</button>
     </div>
 
     <div class="website">
       <h3>Equitymaster</h3>
       <p>Fundamental analysis with detailed insights on Indian stocks and their growth potential.</p>
-      <button onclick="openLink('https://www.equitymaster.com')">Visit Equitymaster</button>
+      <button class="equitymaster">Visit Equitymaster</button>
     </div>
   </section>
 
@@ -115,31 +115,31 @@
     <div class="website">
       <h3>TradingView</h3>
       <p>Real-time charts, global stock screening, and a community of traders sharing ideas.</p>
-      <button onclick="openLink('https://www.tradingview.com')">Visit TradingView</button>
+      <button class="tradingview">Visit TradingView</button>
     </div>
 
     <div class="website">
       <h3>Investing.com</h3>
       <p>Multi-market screening, technical analysis tools, and real-time financial news.</p>
-      <button onclick="openLink('https://www.investing.com')">Visit Investing.com</button>
+      <button class="investing">Visit Investing.com</button>
     </div>
 
     <div class="website">
       <h3>Yahoo Finance</h3>
       <p>Screener for U.S. and global stocks, with historical data and financial insights.</p>
-      <button onclick="openLink('https://finance.yahoo.com')">Visit Yahoo Finance</button>
+      <button class="yahoo-finance">Visit Yahoo Finance</button>
     </div>
 
     <div class="website">
       <h3>Morningstar</h3>
       <p>Deep insights into stocks, ETFs, and mutual funds for informed investment decisions.</p>
-      <button onclick="openLink('https://www.morningstar.com')">Visit Morningstar</button>
+      <button class="morningstar">Visit Morningstar</button>
     </div>
 
     <div class="website">
       <h3>Finviz</h3>
       <p>Advanced U.S. stock screening with heatmaps and technical/fundamental filters.</p>
-      <button onclick="openLink('https://www.finviz.com')">Visit Finviz</button>
+      <button class="finviz">Visit Finviz</button>
     </div>
   </section>
 
@@ -150,9 +150,37 @@
 
   <!-- Internal JavaScript -->
   <script>
-    function openLink(url) {
-      window.open(url, '_blank');  // This opens the URL in a new tab
-    }
+    // Use event listeners to ensure they work across browsers
+    document.querySelector('.screener-in').addEventListener('click', function() {
+      window.location.href = 'https://www.screener.in'; // Navigate to the site
+    });
+    document.querySelector('.tickertape').addEventListener('click', function() {
+      window.location.href = 'https://www.tickertape.in';
+    });
+    document.querySelector('.et-markets').addEventListener('click', function() {
+      window.location.href = 'https://economictimes.indiatimes.com/markets/stocks';
+    });
+    document.querySelector('.marketsmith').addEventListener('click', function() {
+      window.location.href = 'https://marketsmith.in';
+    });
+    document.querySelector('.equitymaster').addEventListener('click', function() {
+      window.location.href = 'https://www.equitymaster.com';
+    });
+    document.querySelector('.tradingview').addEventListener('click', function() {
+      window.location.href = 'https://www.tradingview.com';
+    });
+    document.querySelector('.investing').addEventListener('click', function() {
+      window.location.href = 'https://www.investing.com';
+    });
+    document.querySelector('.yahoo-finance').addEventListener('click', function() {
+      window.location.href = 'https://finance.yahoo.com';
+    });
+    document.querySelector('.morningstar').addEventListener('click', function() {
+      window.location.href = 'https://www.morningstar.com';
+    });
+    document.querySelector('.finviz').addEventListener('click', function() {
+      window.location.href = 'https://www.finviz.com';
+    });
   </script>
 </body>
 </html>
