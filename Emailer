@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Emailer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4285F4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #357ae8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Auto Emailer</h1>
+    <p>Click below to automatically generate and send an email.</p>
+    <button onclick="autoSendEmail()">Send Email</button>
+  </div>
+
+  <script>
+    function autoSendEmail() {
+      const recipient = "recipient@example.com"; // Replace with recipient's email
+      const subject = "Predefined Subject"; // Customize the subject
+      const body = "This is an auto-generated email message."; // Customize the body
+
+      const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      window.location.href = mailtoLink; // Open the default email client with pre-filled data
+    }
+  </script>
+</body>
+</html>
