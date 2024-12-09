@@ -5,100 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Auto Emailer</title>
   <style>
-    /* General body style with background gradient */
     body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #6e7e8f, #3b4a61);
-      height: 100vh;
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      animation: fadeIn 2s ease-in-out;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #6e7e8f, #3b4a61);
     }
-
-    /* Animations for fading in elements */
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
     .container {
       text-align: center;
-      background-color: #ffffff;
-      padding: 30px 50px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      animation: bounceIn 1.5s ease-out;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
-
-    /* Animating container to bounce in */
-    @keyframes bounceIn {
-      0% { transform: scale(0.5); opacity: 0; }
-      60% { transform: scale(1.2); opacity: 1; }
-      100% { transform: scale(1); }
-    }
-
-    h1 {
-      color: #4b9ed3;
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    p {
-      color: #333;
-      font-size: 1.2em;
-      margin-bottom: 20px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
     button {
-      padding: 15px 30px;
-      font-size: 1.2em;
+      padding: 10px 20px;
+      font-size: 16px;
       background-color: #ff6f61;
       color: white;
       border: none;
-      border-radius: 30px;
+      border-radius: 5px;
       cursor: pointer;
-      outline: none;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
-
-    /* Button hover effect with scaling and color change */
     button:hover {
       background-color: #ff3d2e;
-      transform: scale(1.1);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    button:active {
-      transform: scale(1);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to the Auto Emailer</h1>
-    <p>Click below to automatically generate and send an email.</p>
-    <button onclick="autoSendEmail()">Send Email</button>
+    <h1>Auto Emailer</h1>
+    <p>Click below to open your email client with a pre-filled message.</p>
+    <button onclick="sendEmail()">Send Email</button>
   </div>
 
   <script>
-    function autoSendEmail() {
-      const recipient = "recipient@example.com"; // Replace with recipient's email
-      const subject = "Predefined Subject"; // Customize the subject
-      const body = "This is an auto-generated email message."; // Customize the body
+    function sendEmail() {
+      const recipient = "recipient@example.com"; // Replace with the recipient's email
+      const subject = "Hello from Auto Emailer";
+      const body = "This is a test email sent via the Auto Emailer webpage.";
 
-      // Use an anchor tag to trigger the email action
-      var mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      var a = document.createElement('a');
-      a.href = mailtoLink;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
+      // Use `mailto:` protocol to create the link
+      const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      // Open the mail client
+      window.location.href = mailtoLink;
     }
   </script>
 </body>
