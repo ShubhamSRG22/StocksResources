@@ -14,14 +14,41 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: linear-gradient(135deg, #4facfe, #00f2fe);
-      color: #fff;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
       overflow: hidden;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      opacity: 0.1;
+    }
+
+    .logo:nth-child(1) {
+      top: 10%;
+      left: 5%;
+    }
+
+    .logo:nth-child(2) {
+      top: 30%;
+      right: 10%;
+    }
+
+    .logo:nth-child(3) {
+      bottom: 20%;
+      left: 15%;
+    }
+
+    .logo:nth-child(4) {
+      bottom: 5%;
+      right: 20%;
     }
 
     .container {
       text-align: center;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.15);
       border-radius: 15px;
       padding: 30px;
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -55,7 +82,7 @@
       font-size: 1rem;
       font-weight: bold;
       text-decoration: none;
-      color: #4facfe;
+      color: #6a11cb;
       background-color: #fff;
       border-radius: 8px;
       transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
@@ -87,6 +114,13 @@
   </style>
 </head>
 <body>
+  <!-- Background logos -->
+  <img src="https://via.placeholder.com/150" alt="Logo" class="logo">
+  <img src="https://via.placeholder.com/150" alt="Logo" class="logo">
+  <img src="https://via.placeholder.com/150" alt="Logo" class="logo">
+  <img src="https://via.placeholder.com/150" alt="Logo" class="logo">
+
+  <!-- Main Content -->
   <div class="container">
     <h1>Send Me an Email</h1>
     <p>Have any questions or ideas? Click the button below to get in touch!</p>
@@ -94,6 +128,8 @@
       Send Email
     </a>
   </div>
+
+  <!-- Footer -->
   <footer>
     Created by Shubham Giri
   </footer>
