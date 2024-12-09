@@ -14,36 +14,22 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      overflow: hidden;
-      position: relative;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #5bc0eb, #86e3ce);
+      background-size: 400% 400%;
+      animation: gradientAnimation 10s ease infinite;
+      color: #fff;
     }
 
-    .logo {
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      opacity: 0.1;
-    }
-
-    .logo:nth-child(1) {
-      top: 10%;
-      left: 5%;
-    }
-
-    .logo:nth-child(2) {
-      top: 30%;
-      right: 10%;
-    }
-
-    .logo:nth-child(3) {
-      bottom: 20%;
-      left: 15%;
-    }
-
-    .logo:nth-child(4) {
-      bottom: 5%;
-      right: 20%;
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     .container {
@@ -52,28 +38,16 @@
       border-radius: 15px;
       padding: 30px;
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      transform: translateY(50px);
-      animation: fadeIn 1.5s ease-out forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     h1 {
       font-size: 2.5rem;
       margin-bottom: 20px;
-      color: #fff;
     }
 
     p {
       font-size: 1.2rem;
       margin-bottom: 20px;
-      color: #f8f9fa;
     }
 
     a {
@@ -82,7 +56,7 @@
       font-size: 1rem;
       font-weight: bold;
       text-decoration: none;
-      color: #6a11cb;
+      color: #4facfe;
       background-color: #fff;
       border-radius: 8px;
       transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
@@ -98,29 +72,12 @@
       position: absolute;
       bottom: 10px;
       text-align: center;
-      color: #f0f0f0;
       font-size: 0.9rem;
-      animation: slideIn 2s ease-out forwards;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    @keyframes slideIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      color: rgba(255, 255, 255, 0.8);
     }
   </style>
 </head>
 <body>
-  <!-- Background logos -->
-  <img src="https://via.placeholder.com/150" alt="Logo" class="logo">
-  <img src="https://via.placeholder.com/150" alt="Logo" class="logo">
-  <img src="https://via.placeholder.com/150" alt="Logo" class="logo">
-  <img src="https://via.placeholder.com/150" alt="Logo" class="logo">
-
-  <!-- Main Content -->
   <div class="container">
     <h1>Send Me an Email</h1>
     <p>Have any questions or ideas? Click the button below to get in touch!</p>
@@ -128,8 +85,6 @@
       Send Email
     </a>
   </div>
-
-  <!-- Footer -->
   <footer>
     Created by Shubham Giri
   </footer>
